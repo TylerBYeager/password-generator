@@ -1,6 +1,33 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+//password length function I think? IT WORKS! :)
+function determinePassLength() {
+  passwordLength = prompt("How many characters long would you like your password to be? Please choose a length betwee (8-128).");
+  if (passwordLength < 8) {
+    alert("Please choose a valid number greater than 8");
+    determinePassLength(); 
+  } else if (passwordLength > 128) {
+    alert("Please choose a valid number less than 128");
+    determinePassLength();
+  } else if (passwordLength = NaN) {
+    alert("please choose a valid NUMBER between 8-128");
+    determinePassLength();
+  } else {
+    alert("Thank you. Please set further password preferences in the following prompts.");
+  }
+  return passwordLength;
+}
+
+//Creating the password
+function generatePassword() {
+  determinePassLength();
+  console.log(passwordLength);
+}
+
+
+
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -12,6 +39,9 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
+
 
 
 //creating randomized letters
