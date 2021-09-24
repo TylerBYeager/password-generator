@@ -17,7 +17,17 @@ generateBtn.addEventListener("click", writePassword);
 //creating randomized letters
 
 function randomLowerCase() {
-  return String.fromCharCode(Math.floor(Math.random() * 26) +97);
+  return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
 }
 
-console.log(randomLowerCase());
+function randomUpperCase() {
+  return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+}
+
+console.log(randomUpperCase());
+
+//creating randomized numbers 
+function randomNumber() {
+  return String.fromCharCode(Math.floor(Math.random() * 10) +48);
+}
+console.log(randomNumber());
