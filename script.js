@@ -31,3 +31,10 @@ function randomNumber() {
   return String.fromCharCode(Math.floor(Math.random() * 10) +48);
 }
 console.log(randomNumber());
+
+//creating randomized symbols
+function randomSymbol() {
+  var symbols = "!@#$%^&*(){}[]=<>/,."; 
+  return symbols[Math.floor(Math.random() * symbols.length)];
+}
+console.log(randomSymbol());
