@@ -108,7 +108,41 @@ function generatePassword() {
   console.log(confirmNumbers);
   determineSymbols();
   console.log(confirmSymbols);
+
+
+var password = "";
+if (confirmUpper && confirmNumbers && confirmSymbols){
+  randomLowerCase += randomUpperCase + randomNumber + randomSymbol;
+
+}else if (confirmUpper && confirmNumbers){
+  randomLowerCase += randomUpperCase + randomNumber;
+
+}else if (confirmNumbers && confirmSymbols){
+  randomLowerCase += randomUpperCase + randomSymbol;
+
+}else if (confirmUpper && confirmSymbols){
+  randomLowerCase += randomUpperCase + randomSymbol;
+
+}else if (confirmUpper){
+  randomLowerCase += randomUpperCase;
+
+}else if(confirmNumbers){
+  randomLowerCase += randomNumber;
+
+}else if (specialCheck){
+  randomLowerCase += randomSymbol;
+
+}else{
+  randomLowerCase === randomLowerCase;
 }
+
+  for(var i = 0; i < passwordLength; i++){
+    password += randomLowerCase.charAt(Math.floor(Math.random() * randomLowerCase.length));
+  }
+  return password;
+}
+
+
 
 
 
@@ -124,6 +158,9 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
+
 
 
 
