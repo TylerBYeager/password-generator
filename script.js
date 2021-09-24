@@ -47,9 +47,16 @@ function generatePassword() {
       charTypes[Math.floor(Math.random() * charTypes.length)];
     console.log(randomCharType);
 
-
-
-
+    //randomizer using math.floor(math.random) and character codes (previous attempt utilized a similar approach)
+    if (randomCharType === 0) {
+      console.log("Random Lowercase");
+      var randomCharCode = Math.floor(Math.random() * 25) + 97;
+      console.log(randomCharCode);
+      var asciiCode = String.fromCharCode(randomCharCode);
+      console.log(asciiCode);
+      yourPassword = yourPassword.concat(asciiCode);
+    } 
+  }}
 
 
 
