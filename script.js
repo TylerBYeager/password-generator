@@ -55,8 +55,15 @@ function generatePassword() {
       var asciiCode = String.fromCharCode(randomCharCode);
       console.log(asciiCode);
       yourPassword = yourPassword.concat(asciiCode);
+    } else if (randomCharType === 1) {
+      console.log("Random Uppercase");
+      var randomCharCode = Math.floor(Math.random() * 25) + 65;
+      console.log(randomCharCode);
+      var asciiCode = String.fromCharCode(randomCharCode);
+      console.log(asciiCode);
+      yourPassword = yourPassword.concat(asciiCode);
     } 
-  }}
+
 
 
 
