@@ -10,8 +10,21 @@ function generatePassword() {
   } else {
     console.log(passwordLength);
   }
-}
 
+  var charTypes = [];
+
+  var lowerCase = confirm("Would you like to include Lower Case letters in your password?");
+  if (lowerCase === true) {
+    charTypes.push(0);
+  }
+  console.log(lowerCase);
+
+  var upperCase = confirm("Would you like to include Upper Case letters in your password?");
+  if (upperCase === true) {
+    charTypes.push(1);
+  }
+  console.log(upperCase);
+}
 
 
 // Write password to the #password input
