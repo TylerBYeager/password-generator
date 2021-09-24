@@ -1,29 +1,62 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-//password length function I think? IT WORKS! :)
+//password length function
 function determinePassLength() {
   passwordLength = prompt("How many characters long would you like your password to be? Please choose a length betwee (8-128).");
   if (passwordLength < 8) {
     alert("Please choose a valid number greater than 8");
     determinePassLength(); 
+
   } else if (passwordLength > 128) {
     alert("Please choose a valid number less than 128");
     determinePassLength();
+
   } else if (passwordLength = NaN) {
     alert("please choose a valid NUMBER between 8-128");
     determinePassLength();
+
   } else {
     alert("Thank you. Please set further password preferences in the following prompts.");
+
   }
   return passwordLength;
 }
+
+//uppercase function possibly works. 
+/*function determineUpperCase() {
+  comfirmUpper = prompt("Would you like to include Upper Case letters in your password? Please say 'yes' or 'no'.");
+  confirmUpper = confirmUpper.toLowerCase();
+
+  if (confirmUpper === null || confirmUpper === "") {
+    alert("Please enter a valid response.")
+    determineUpperCase();
+
+  } else if (confirmUpper === 'yes' || confirmUpper === 'y') {
+    comfirmUpper = true;
+    return confirmUpper;
+
+  }else if (confirmUpper === 'no' || confirmUpper === 'no') {
+    confirmUpper = false;
+    return confirmUpper;
+
+  } else {
+    alert("Please answer 'yes' or 'no");
+
+  }
+  return confirmUpper;
+}  */
+
+
+
 
 //Creating the password
 function generatePassword() {
   determinePassLength();
   console.log(passwordLength);
-}
+  determineUpperCase();
+  console.log(confirmUpper);
+
 
 
 
@@ -39,7 +72,6 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
 
 
 
