@@ -10,7 +10,8 @@ This project was one that featured a small amount of starter code that needed ad
 5. Then numbers. 
 6. Finally special symbols before automatically generating a password that meets the previously established criteria. 
 
-[image placeholder]
+![Snapshot](https://user-images.githubusercontent.com/89880190/134632547-7ae55447-6c31-4b59-b8f8-71fb3055994d.png)
+
 ---
 ## Some Code Snippets
 Here I provide and explain just a few code snippets. The first bit of code is the code that helped determine the length of the password. While part of the greater "generatePassword" function, the 'passwordLength' prompt is really what began the entire process as the prompt allowed for user input and prevented any invalid information from breaking the code. 
@@ -34,6 +35,9 @@ Next we have the creation of the variable 'lowerCase.' This variable set a new p
 ```
 
 For the last bit of teaser code we create a 'for...loop' that helps tie everything together to create the password. Not shown are the conditional statements that introduce the randomized aspect of the generator using Math.Floor(Math.Random) and character key codes. 
+
+![ASCII](https://user-images.githubusercontent.com/89880190/134632672-293cd1da-2285-4737-94c4-1fb14ebda9e0.jpg)
+
 ```
 for (var i = 0; i < passwordLength; ++i) {
     var randomCharType =
@@ -50,7 +54,8 @@ Getting your clone:
 ```
 Once you have a working SSH key added to your Github account, go to the Code-Refactor Repository. Click the green "code" button on the top right and clonecopy the @github.com link with the SSH key option to your clipboard. 
 ```
-![clone]
+![clone](https://user-images.githubusercontent.com/89880190/134632726-13ef8744-77ab-44b9-a398-d232dc21f51b.png)
+
 
 Next: 
 
