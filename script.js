@@ -24,8 +24,18 @@ function generatePassword() {
     charTypes.push(1);
   }
   console.log(upperCase);
-}
 
+  var numbers = confirm("Do you want to include numbers in your password?");
+  if (numbers === true) {
+    charTypes.push(2);
+  }
+  console.log(numbers);
+
+  var symbols = confirm("Do you want to include symbols in your password?");
+  if (symbols === true) {
+    charTypes.push(3);
+  }
+}
 
 // Write password to the #password input
 function writePassword() {
