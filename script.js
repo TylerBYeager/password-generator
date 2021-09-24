@@ -1,6 +1,34 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+
+function generatePassword() {
+
+
+
+
+
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
+
+}
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
+
+
+
+
+
+
+
+
+/*
+
 //password length function
 function determinePassLength() {
   passwordLength = prompt("How many characters long would you like your password to be? Please choose a length betwee (8-128).");
@@ -25,8 +53,8 @@ function determinePassLength() {
 
 //uppercase function possibly works. 
 function determineUpperCase() {
-  comfirmUpper = prompt("Would you like to include Upper Case letters in your password? Please say 'yes' or 'no'.");
-  confirmUpper = confirmUpper.toLowerCase();
+  var comfirmUpper = prompt("Would you like to include Upper Case letters in your password? Please say 'yes' or 'no'.");
+  let confirmUpper = confirmUpper.toLowerCase();
 
   if (confirmUpper === null || confirmUpper === "") {
     alert("Please enter a valid response.")
@@ -34,16 +62,13 @@ function determineUpperCase() {
 
   } else if (confirmUpper === 'yes' || confirmUpper === 'y') {
     comfirmUpper = true;
-    return confirmUpper;
 
   } else if (confirmUpper === 'no' || confirmUpper === 'no') {
     confirmUpper = false;
-    return confirmUpper;
 
   } else {
     alert("Please answer 'yes' or 'no");
   }
-  return confirmUpper;
 }
 
 
@@ -83,17 +108,14 @@ function determineSymbol(){
 
   } else if (confirmSymbols === "yes" || confirmSymbols ==="y"){
     confirmSymbols = true;
-    return confirmSymbols;
 
   } else if (confirmSymbols === "no" || confirmSymbols ==="n"){
     confirmSymbols = false;
-    return confirmSymbols;
     
   } else {
     alert("Please answer 'yes' or 'no");
     determineSymbol();
   }
-  return confirmSymbols;
 }
 
 
@@ -114,25 +136,25 @@ var password = "";
 if (confirmUpper && confirmNumbers && confirmSymbols){
   randomLowerCase += randomUpperCase + randomNumber + randomSymbol;
 
-}else if (confirmUpper && confirmNumbers){
+} else if (confirmUpper && confirmNumbers){
   randomLowerCase += randomUpperCase + randomNumber;
 
-}else if (confirmNumbers && confirmSymbols){
+} else if (confirmNumbers && confirmSymbols){
   randomLowerCase += randomUpperCase + randomSymbol;
 
-}else if (confirmUpper && confirmSymbols){
+} else if (confirmUpper && confirmSymbols){
   randomLowerCase += randomUpperCase + randomSymbol;
 
-}else if (confirmUpper){
+} else if (confirmUpper){
   randomLowerCase += randomUpperCase;
 
-}else if(confirmNumbers){
+} else if(confirmNumbers){
   randomLowerCase += randomNumber;
 
-}else if (specialCheck){
+} else if (specialCheck){
   randomLowerCase += randomSymbol;
 
-}else{
+} else {
   randomLowerCase === randomLowerCase;
 }
 
@@ -145,19 +167,6 @@ if (confirmUpper && confirmNumbers && confirmSymbols){
 
 
 
-
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
-}
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
 
 
 
@@ -189,3 +198,16 @@ function randomSymbol() {
   return symbols[Math.floor(Math.random() * symbols.length)];
 }
 console.log(randomSymbol());
+
+
+
+var passwordLength = 0;
+var confirmUpper = false;
+var confirmNumbers = false;
+var confirmSymbols = false;
+
+
+
+
+
+*/
