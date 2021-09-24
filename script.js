@@ -24,7 +24,7 @@ function determinePassLength() {
 }
 
 //uppercase function possibly works. 
-/*function determineUpperCase() {
+function determineUpperCase() {
   comfirmUpper = prompt("Would you like to include Upper Case letters in your password? Please say 'yes' or 'no'.");
   confirmUpper = confirmUpper.toLowerCase();
 
@@ -44,11 +44,11 @@ function determinePassLength() {
     alert("Please answer 'yes' or 'no");
   }
   return confirmUpper;
-}  */
+}
 
 
 //number function might also work. 
-/*function determineNumbers(){
+function determineNumbers(){
   confirmNumbers = prompt("Do you want to include numbers in your password? Please answer 'yes' or 'no'. ");
   confirmNumbers = confirmNumbers.toLowerCase();
 
@@ -69,11 +69,32 @@ function determinePassLength() {
     determineNumbers();
   }
   return confirmNumbers;
-}*/
+}
 
 
 //symbol function
+function determineSymbol(){
+  confirmSymbols = prompt("Do you want to include symbols in your password? Please answer 'yes' or 'no'. ");
+  confirmSymbols = confirmSymbols.toLowerCase();
 
+  if (confirmSymbols === null || cconfirmSymbols === "") {
+    alert("Please enter a valid response.");
+    determineSymbol();
+
+  } else if (confirmSymbols === "yes" || confirmSymbols ==="y"){
+    confirmSymbols = true;
+    return confirmSymbols;
+
+  } else if (confirmSymbols === "no" || confirmSymbols ==="n"){
+    confirmSymbols = false;
+    return confirmSymbols;
+    
+  } else {
+    alert("Please answer 'yes' or 'no");
+    determineSymbol();
+  }
+  return confirmSymbols;
+}
 
 
 
@@ -85,7 +106,9 @@ function generatePassword() {
   console.log(confirmUpper);
   determineNumbers();
   console.log(confirmNumbers);
-
+  determineSymbols();
+  console.log(confirmSymbols);
+}
 
 
 
