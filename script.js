@@ -62,6 +62,13 @@ function generatePassword() {
       var asciiCode = String.fromCharCode(randomCharCode);
       console.log(asciiCode);
       yourPassword = yourPassword.concat(asciiCode);
+    } else if (randomCharType === 2) {
+      console.log("Random Numbers");
+      var randomCharCode = Math.floor(Math.random() * 9) + 48;
+      console.log(randomCharCode);
+      var asciiCode = String.fromCharCode(randomCharCode);
+      console.log(asciiCode);
+      yourPassword = yourPassword.concat(asciiCode);
     } 
 
 
