@@ -36,16 +36,43 @@ function determinePassLength() {
     comfirmUpper = true;
     return confirmUpper;
 
-  }else if (confirmUpper === 'no' || confirmUpper === 'no') {
+  } else if (confirmUpper === 'no' || confirmUpper === 'no') {
     confirmUpper = false;
     return confirmUpper;
 
   } else {
     alert("Please answer 'yes' or 'no");
-
   }
   return confirmUpper;
 }  */
+
+
+//number function might also work. 
+/*function determineNumbers(){
+  confirmNumbers = prompt("Do you want to include numbers in your password? Please answer 'yes' or 'no'. ");
+  confirmNumbers = confirmNumbers.toLowerCase();
+
+  if (confirmNumbers === null || confirmNumbers === "") {
+    alert("Please enter a valid response.");
+    determineNumbers();
+
+  } else if (confirmNumbers === "yes" || confirmNumbers ==="y"){
+    confirmNumbers = true;
+    return confirmNumbers;
+
+  } else if (confirmNumbers === "no" || confirmNumbers ==="n"){
+    confirmNumbers = false;
+    return confirmNumbers;
+    
+  } else {
+    alert("Please answer 'yes' or 'no");
+    determineNumbers();
+  }
+  return confirmNumbers;
+}*/
+
+
+//symbol function
 
 
 
@@ -56,6 +83,8 @@ function generatePassword() {
   console.log(passwordLength);
   determineUpperCase();
   console.log(confirmUpper);
+  determineNumbers();
+  console.log(confirmNumbers);
 
 
 
