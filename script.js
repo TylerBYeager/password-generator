@@ -1,7 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-
+//function to determine password parameters
 function generatePassword() {
   var passwordLength = prompt("How many characters long would you like your password to be? Please choose a length betwee (8-128).");
   if (passwordLength < 8 || passwordLength > 128 || passwordLength === NaN) {
@@ -35,7 +35,24 @@ function generatePassword() {
   if (symbols === true) {
     charTypes.push(3);
   }
-}
+  console.log(symbols);
+
+  console.log(charTypes);
+
+  var yourPassword = "";
+
+  //set up for random characters
+  for (var i = 0; i < passwordLength; ++i) {
+    var randomCharType =
+      charTypes[Math.floor(Math.random() * charTypes.length)];
+    console.log(randomCharType);
+
+
+
+
+
+
+
 
 // Write password to the #password input
 function writePassword() {
