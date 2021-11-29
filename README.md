@@ -1,4 +1,4 @@
-# Modify Starter Code Password Generator 
+# Password Generator 
 This is the third homework assignment for the UC Berkeley Full Stack Coding bootcamp. I found this project quite difficult to complete as my first attempt had issues with local vs global scope. Following the completion of this project I have found myself inspired to dive in to javascript further and learn as much as I possibly can.
 
 ## Project Details
